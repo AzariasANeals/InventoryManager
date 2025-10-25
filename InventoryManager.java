@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class InventoryManager {
 
     // Duplicates zeros in place
@@ -22,6 +24,7 @@ public class InventoryManager {
             if (newPos < length) {
                 inventory[newPos] = inventory[i];
                 System.out.println("inventory[newPos]: " + inventory[newPos]); 
+                System.out.println("inventory[i]: " + inventory[i]);
             }
         
             // If zero, duplicate it
@@ -32,6 +35,7 @@ public class InventoryManager {
                 }
             }
         }
+        System.out.println("Inventory Array: " + Arrays.toString(inventory));
     }
 
     public static void main(String[] args) {
@@ -41,7 +45,8 @@ public class InventoryManager {
         for (int i : inventory) {
             System.out.print(i + " ");
         }
-        
+        // Output: 4 0 0 1 3 0 0 2
+
         System.out.println("");
         int[] inventory2 = {3,2,1};
         duplicateZeros(inventory2);
@@ -49,6 +54,6 @@ public class InventoryManager {
         for (int i : inventory2) {
             System.out.print(i + " ");
         }
-        // Output: 4 0 0 1 3 0 0 2
+        // Output: 3 2 1
     }
 }
